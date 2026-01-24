@@ -1,65 +1,73 @@
 import Image from "next/image";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="flex min-h-screen flex-col items-center justify-center bg-background p-8 font-body transition-colors duration-300">
+      <main className="flex w-full max-w-4xl flex-col gap-12">
+        {/* Header Section */}
+        <section className="flex flex-col gap-4">
+          <h1 className="text-primary font-heading">Login to GitCMS</h1>
+          <p className="max-w-xl text-text-main opacity-80">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        </section>
+
+        {/* Buttons Section */}
+        <section className="flex flex-col gap-4 max-w-sm">
+          <button className="flex h-12 w-full items-center justify-center gap-2 rounded-brand bg-primary px-5 text-white font-semibold transition-opacity hover:opacity-90">
+            <span className="text-xl">+</span> New Post
+          </button>
+
+          <button className="flex h-12 w-full items-center justify-center gap-2 rounded-brand border border-black/10 bg-white dark:bg-zinc-900 px-5 text-text-main font-medium transition-colors hover:bg-black/[0.02] dark:hover:bg-white/[0.02]">
             <Image
-              className="dark:invert"
               src="/vercel.svg"
-              alt="Vercel logomark"
+              alt="GitHub"
               width={16}
               height={16}
+              className="dark:invert opacity-80"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+            Continue with GitHub
+          </button>
+        </section>
+
+        {/* Content Section */}
+        <section className="flex flex-col gap-6">
+          <h2 className="font-heading">Recent Posts</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex flex-col overflow-hidden rounded-brand border border-black/5 dark:border-white/5 bg-white dark:bg-zinc-900 shadow-sm">
+              <div className="h-48 bg-accent/20 flex items-center justify-center">
+                <div className="w-12 h-12 rounded bg-accent/40 opacity-50" />
+              </div>
+              <div className="p-6 flex flex-col gap-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/30 px-2 py-0.5 rounded">
+                    Published
+                  </span>
+                  <span className="text-[10px] text-text-main/40">2h ago</span>
+                </div>
+                <h3 className="text-lg leading-tight">
+                  How to scale React apps with Micro-frontends
+                </h3>
+                <p className="line-clamp-2 text-text-main/60">
+                  Learn the best practices for managing large scale frontend
+                  architectures using module federation and specialized
+                  patterns.
+                </p>
+                <div className="mt-2 flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-accent" />
+                  <span className="text-[11px] font-medium">Alex Chen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <ThemeToggle />
     </div>
   );
 }
