@@ -1,58 +1,58 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: var(--brand-primary);
-  --color-primary-foreground: var(--brand-primary-fg);
-  --color-background: var(--brand-background);
-  --color-text-main: var(--brand-text);
-  --color-accent: var(--brand-accent);
-  --color-accent-foreground: var(--brand-accent-fg);
-  
-  --font-heading: var(--brand-font-heading);
-  --font-body: var(--brand-font-body);
-  
-  --radius-brand: var(--brand-radius);
-  --spacing-brand: var(--brand-spacing-unit);
+    --color-primary: var(--brand-primary);
+    --color-primary-foreground: var(--brand-primary-fg);
+    --color-background: var(--brand-background);
+    --color-text-main: var(--brand-text);
+    --color-accent: var(--brand-accent);
+    --color-accent-foreground: var(--brand-accent-fg);
 
-  --font-sans: var(--brand-font-body);
+    --font-heading: var(--brand-font-heading);
+    --font-body: var(--brand-font-body);
+
+    --radius-brand: var(--brand-radius);
+    --spacing-brand: var(--brand-spacing-unit);
+
+    --font-sans: var(--brand-font-body);
 }
 
 @layer base {
-  body {
-    background-color: var(--brand-background);
-    color: var(--brand-text);
-    font-family: var(--brand-font-body);
-    font-size: var(--text-body);
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+    body {
+        background-color: var(--brand-background);
+        color: var(--brand-text);
+        font-family: var(--brand-font-body);
+        font-size: var(--text-body);
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-  h1 {
-    font-family: var(--brand-font-heading);
-    font-size: var(--text-h1);
-    font-weight: 700;
-    margin: 0;
-  }
+    h1 {
+        font-family: var(--brand-font-heading);
+        font-size: var(--text-h1);
+        font-weight: 700;
+        margin: 0;
+    }
 
-  h2 {
-    font-family: var(--brand-font-heading);
-    font-size: var(--text-h2);
-    font-weight: 700;
-    margin: 0;
-  }
+    h2 {
+        font-family: var(--brand-font-heading);
+        font-size: var(--text-h2);
+        font-weight: 700;
+        margin: 0;
+    }
 
-  h3 {
-    font-family: var(--brand-font-heading);
-    font-size: var(--text-h3);
-    font-weight: 600;
-    margin: 0;
-  }
+    h3 {
+        font-family: var(--brand-font-heading);
+        font-size: var(--text-h3);
+        font-weight: 600;
+        margin: 0;
+    }
 
-  h4 {
-    font-family: var(--brand-font-heading);
-    font-size: var(--text-h4);
-    font-weight: 600;
-    margin: 0;
-  }
+    h4 {
+        font-family: var(--brand-font-heading);
+        font-size: var(--text-h4);
+        font-weight: 600;
+        margin: 0;
+    }
 }

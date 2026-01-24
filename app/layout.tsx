@@ -26,19 +26,25 @@ export default function RootLayout({
   return (
     <html lang="es" className={robotoSerif.variable} suppressHydrationWarning>
       <head>
-        <style dangerouslySetInnerHTML={{ __html: `
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
           :root {
-            ${Object.entries(lightStyles).map(([k, v]) => `${k}: ${v};`).join(' ')}
+            ${Object.entries(lightStyles)
+              .map(([k, v]) => `${k}: ${v};`)
+              .join(" ")}
           }
           [data-theme='dark'] {
-            ${Object.entries(darkStyles).map(([k, v]) => `${k}: ${v};`).join(' ')}
+            ${Object.entries(darkStyles)
+              .map(([k, v]) => `${k}: ${v};`)
+              .join(" ")}
           }
-        `}} />
+        `,
+          }}
+        />
       </head>
       <body>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
