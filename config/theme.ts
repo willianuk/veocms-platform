@@ -1,38 +1,45 @@
 export const themeConfig = {
+  // Shared brand tokens
+  brand: {
+    primary: "#DD4B39",
+    primaryForeground: "#FFFFFF",
+    accent: "#FBE0DD",
+    accentForeground: "#141414",
+    radius: "10px",
+    spacing: "4px",
+    fontHeading: "var(--font-roboto-serif)",
+    fontBody: "Segoe UI, system-ui, -apple-system, sans-serif",
+  },
+  // Semantic tokens for each mode
   modes: {
     light: {
-      colors: {
-        primary: {
-          base: "#DD4B39",
-          foreground: "#FFFFFF",
-        },
-        background: "#F8F9FA",
-        text: "#141414",
-        accent: {
-          base: "#FBE0DD",
-          foreground: "#141414",
-        },
-      },
+      background: "#F8F9FA",
+      foreground: "#141414",
+      card: "#FFFFFF",
+      cardForeground: "#141414",
+      popover: "#FFFFFF",
+      popoverForeground: "#141414",
+      muted: "#F1F1F1",
+      mutedForeground: "#71717A",
+      border: "#E4E4E7",
+      input: "#E4E4E7",
+      ring: "#DD4B39",
     },
     dark: {
-      colors: {
-        primary: {
-          base: "#E25C4D",
-          foreground: "#FFFFFF",
-        },
-        background: "#0F0F0F",
-        text: "#F1F1F1",
-        accent: {
-          base: "#2D1B1A",
-          foreground: "#FBE0DD",
-        },
-      },
+      background: "#0F0F0F",
+      foreground: "#F1F1F1",
+      card: "#18181B",
+      cardForeground: "#F1F1F1",
+      popover: "#18181B",
+      popoverForeground: "#F1F1F1",
+      muted: "#27272A",
+      mutedForeground: "#A1A1AA",
+      border: "#27272A",
+      input: "#27272A",
+      ring: "#E25C4D",
     },
   },
-  fonts: {
-    heading: "'Roboto Serif', serif",
-    body: "Segoe UI, system-ui, -apple-system, sans-serif",
-  },
+  // Typography scales
   typography: {
     h1: "56px",
     h2: "30px",
@@ -40,8 +47,6 @@ export const themeConfig = {
     h4: "12px",
     body: "12px",
   },
-  radius: "10px",
-  spacing: "4px",
 } as const;
 
 export type ThemeConfig = typeof themeConfig;
