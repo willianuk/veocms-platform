@@ -7,7 +7,7 @@ export default function Home() {
       <main className="flex w-full max-w-4xl flex-col gap-12">
         {/* Header Section */}
         <section className="flex flex-col gap-4">
-          <h1 className="text-primary font-heading">Login to GitCMS</h1>
+          <h1 className="text-primary font-heading">Login to VeoCMS</h1>
           <p className="max-w-xl text-foreground/80">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

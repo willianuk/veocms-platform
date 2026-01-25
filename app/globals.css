@@ -4,22 +4,22 @@
     /* Colors */
     --color-background: var(--brand-background);
     --color-foreground: var(--brand-foreground);
-
+    
     --color-primary: var(--brand-primary);
     --color-primary-foreground: var(--brand-primary-fg);
-
+    
     --color-accent: var(--brand-accent);
     --color-accent-foreground: var(--brand-accent-fg);
-
+    
     --color-card: var(--brand-card);
     --color-card-foreground: var(--brand-card-fg);
-
+    
     --color-popover: var(--brand-popover);
     --color-popover-foreground: var(--brand-popover-fg);
-
+    
     --color-muted: var(--brand-muted);
     --color-muted-foreground: var(--brand-muted-fg);
-
+    
     --color-border: var(--brand-border);
     --color-input: var(--brand-input);
     --color-ring: var(--brand-ring);
@@ -51,28 +51,40 @@
     h1 {
         font-family: var(--brand-font-heading);
         font-size: var(--text-h1);
-        font-weight: 700;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
         margin: 0;
     }
 
     h2 {
         font-family: var(--brand-font-heading);
         font-size: var(--text-h2);
-        font-weight: 700;
+        font-weight: 500;
         margin: 0;
     }
 
     h3 {
         font-family: var(--brand-font-heading);
         font-size: var(--text-h3);
-        font-weight: 600;
+        font-weight: 500;
         margin: 0;
     }
 
     h4 {
         font-family: var(--brand-font-heading);
         font-size: var(--text-h4);
-        font-weight: 600;
+        font-weight: 500;
         margin: 0;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    small {
+        font-size: var(--text-small);
+        line-height: 1.5;
     }
 }

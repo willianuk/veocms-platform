@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { Roboto_Serif } from "next/font/google";
+import { Newsreader, Inter } from "next/font/google";
 import "./globals.css";
 import { themeConfig } from "@/config/theme";
 import { generateThemeVariables } from "@/lib/theme-utils";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const robotoSerif = Roboto_Serif({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-roboto-serif",
+  variable: "--font-newsreader",
+  style: "normal",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -24,20 +30,20 @@ export default function RootLayout({
   const darkStyles = generateThemeVariables(themeConfig, "dark");
 
   return (
-    <html lang="es" className={robotoSerif.variable} suppressHydrationWarning>
+    <html lang="es" className={`${newsreader.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
         <style
           dangerouslySetInnerHTML={{
             __html: `
           :root {
             ${Object.entries(lightStyles)
-              .map(([k, v]) => `${k}: ${v};`)
-              .join(" ")}
+                .map(([k, v]) => `${k}: ${v};`)
+                .join(" ")}
           }
           [data-theme='dark'] {
             ${Object.entries(darkStyles)
-              .map(([k, v]) => `${k}: ${v};`)
-              .join(" ")}
+                .map(([k, v]) => `${k}: ${v};`)
+                .join(" ")}
           }
         `,
           }}
