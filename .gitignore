@@ -42,3 +42,7 @@ next-env.d.ts
 
 .opencode/
 .agents/
+.agent/
+.claude/
+
+.sisyphus/

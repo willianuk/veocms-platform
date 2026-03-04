@@ -47,7 +47,9 @@ export default function Home() {
                   <span className="text-[10px] font-bold uppercase tracking-wider text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/30 px-2 py-0.5 rounded">
                     Published
                   </span>
-                  <span className="text-[10px] text-muted-foreground">2h ago</span>
+                  <span className="text-[10px] text-muted-foreground">
+                    2h ago
+                  </span>
                 </div>
                 <h3 className="text-lg leading-tight text-card-foreground">
                   How to scale React apps with Micro-frontends
@@ -59,7 +61,9 @@ export default function Home() {
                 </p>
                 <div className="mt-2 flex items-center gap-2">
                   <div className="w-6 h-6 rounded-full bg-accent" />
-                  <span className="text-[11px] font-medium text-card-foreground">Alex Chen</span>
+                  <span className="text-[11px] font-medium text-card-foreground">
+                    Alex Chen
+                  </span>
                 </div>
               </div>
             </div>
